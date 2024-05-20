@@ -6,9 +6,9 @@ app.use(express.json());
 
 app.get('/api/get-next-num', (req, res) => {
     const number = req.body.num;
-    if(isNaN(number)){
-        return res.json({message:"error" , status: 'failure'})
-    }
+    // if(isNaN(number)){
+    //     return res.json({message:"error" , status: 'failure'})
+    // }
     const newNumber = parseInt(number) + 1;
     return res.json({message: newNumber, status: 'success'})
 })
